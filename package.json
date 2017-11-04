@@ -1,0 +1,25 @@
+{
+  "name": "modulos-en-amd-con-promesas-kevmch",
+  "version": "1.0.0",
+  "description": "Create the amd with promises",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ULL-ESIT-MII-CA-1718/modulos-en-amd-con-promesas-KevMCh.git"
+  },
+  "keywords": [
+    "amd",
+    "promises",
+    "javascript",
+    "eloquentjavascript"
+  ],
+  "author": "Kevin Martín Chinea",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ULL-ESIT-MII-CA-1718/modulos-en-amd-con-promesas-KevMCh/issues"
+  },
+  "homepage": "https://github.com/ULL-ESIT-MII-CA-1718/modulos-en-amd-con-promesas-KevMCh#readme"
+}
