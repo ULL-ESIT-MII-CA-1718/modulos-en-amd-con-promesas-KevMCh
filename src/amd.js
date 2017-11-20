@@ -2,12 +2,22 @@ var fs = require('fs');
 
 function backgroundReadFile(file) {
   return new Promise(function(suceed, fail) {
-    suceed(fs.readFile(file));
+    fs.readFile(file, function(err, data) {
+  		if (err) {
+  			fail(err);
+  		} else {
+        suceed(data);
+      }
+    });
   });
 }
 
 var defineCache = Object.create(null);
-var currentMod = null;
+var currentMod = {
+  exports: null,
+  loaded: false,
+  onLoad: []
+};
 
 function getModule(name) {
   return new Promise(function(suceed, fail) {
@@ -20,15 +30,16 @@ function getModule(name) {
   		onLoad: []
     };
 
-    defineCache[name] = module;
     backgroundReadFile(name + ".js").then(function(code) {
-      currentMod = module;
       new Function("", code)();
+
+      currentMod = module;
+      defineCache[name] = module;
+      success(module);
+
     }, function(error) {
       fail(new Error(error));
     });
-
-    suceed(module);
   });
 }
 
