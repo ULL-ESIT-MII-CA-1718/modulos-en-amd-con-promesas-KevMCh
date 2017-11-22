@@ -4,7 +4,7 @@
   "description": "Create the amd with promises",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "./node_modules/mocha/bin/mocha"
   },
   "repository": {
     "type": "git",
@@ -21,5 +21,12 @@
   "bugs": {
     "url": "https://github.com/ULL-ESIT-MII-CA-1718/modulos-en-amd-con-promesas-KevMCh/issues"
   },
-  "homepage": "https://github.com/ULL-ESIT-MII-CA-1718/modulos-en-amd-con-promesas-KevMCh#readme"
+  "homepage": "https://github.com/ULL-ESIT-MII-CA-1718/modulos-en-amd-con-promesas-KevMCh#readme",
+  "dependencies": {
+    "better-assert": "^1.0.2",
+    "gulp": "^3.9.1",
+    "gulp-shell": "^0.6.3",
+    "mocha": "^4.0.1",
+    "should": "^13.1.3"
+  }
 }
